@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/Red_Hat_logo.png" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar_style.css') }}">
+    <title>Python advanced topics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/images/redhat-background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: inherit
+        }
+
+        header {
+            background-color: rgba(255, 25, 0, 0.2);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin: 40px;
+            padding: 40px;
+            border-radius: 5px;
+        }
+
+        nav {
+            background-color: rgba(255, 25, 0, 0.2);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        section {
+            margin: 60px;
+            padding: 60px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #d32f2f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #d32f2f;
+            color: #fff;
+        }
+
+        .code-block {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: Consolas, monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .navbar {
+            background-color: #b71c1c;
+            padding: 15px;
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        .container_table {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar-container">
+            <h1>Python advanced concepts</h1>
+            <ul class="navbar-links">
+                <li><a href="/">Home</a></li>
+            </ul>
+    </header>
+
+    <section id="packages">
+        <h2>Packages</h2>
+        <p>Packages in python allow for additional code libraries and functionality to be easily implemented in any
+            project you have. We will use the Turtle package here as an example.<br>
+            Turtle graphics is a fun and interactive way to learn programming using Python.
+            It allows you to control a virtual "turtle" (a pen) that moves around the screen, drawing lines, shapes, and
+            patterns based on commands you give it.</p>
+        <div class="code-block">
+            # Import turtle package<br>
+            import turtle
+        </div>
+        <br>
+        <p>Create window for the turtle to work in</p>
+        <div class="code-block">
+            screen = turtle.Screen()
+        </div>
+        <p>Create a turtle called my_turtle</p>
+        <div class="code-block">
+            my_turtle = turtle.Turtle()
+        </div>
+        <br>
+        <p>Below are examples of different commands you can give your turtle</p>
+        <div class="code-block">
+            # Move turtle forward and backwards
+            my_turtle.forward(100) # Move the turtle forward by 100 units
+            my_turtle.backward(50) # Move the turtle backward by 50 units
+        </div>
+        <br>
+        <div class="code-block">
+            # Turn turtle left and right
+            my_turtle.left(45) # Turn 45 degrees left
+            my_turtle.right(90) # Turn 90 degrees right
+        </div>
+        <br>
+        <div class="code-block">
+            # Function to draw a square
+            def draw_square():
+            for _ in range(4):
+            my_turtle.forward(100)
+            my_turtle.left(90)
+
+            draw_square() # Call the function to draw a square
+        </div>
+
+        <br>
+        <div class="code-block">
+            # Include the line below to state the drawing is finished
+            turtle.done()
+        </div>
+    </section>
+    <br>
+    <section>
+        <p>Here is a full example for testing you can run. First create a python file called turtle.py</p>
+        <div class="code-block">
+            import turtle
+
+            # Set up the screen
+            screen = turtle.Screen()
+            screen.bgcolor("white")
+
+            # Create a turtle named "star_turtle"
+            star_turtle = turtle.Turtle()
+            star_turtle.shape("turtle")
+            star_turtle.speed(3)
+
+            # Function to draw a star
+            def draw_star(size):
+            for _ in range(5): # A star has 5 points
+            star_turtle.forward(size)
+            star_turtle.right(144) # Turns the turtle 144 degrees to the right (five times due to the loop)
+
+            # Draw the star
+            draw_star(100)
+
+            # Finish
+            turtle.done()
+        </div>
+    </section>
+</body>
+
+</html>

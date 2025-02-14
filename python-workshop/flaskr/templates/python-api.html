@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/Red_Hat_logo.png" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar_style.css') }}">
+    <title>Python advanced topics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/images/redhat-background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: inherit
+        }
+
+        header {
+            background-color: rgba(255, 25, 0, 0.2);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin: 40px;
+            padding: 40px;
+            border-radius: 5px;
+        }
+
+        nav {
+            background-color: rgba(255, 25, 0, 0.2);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        section {
+            margin: 60px;
+            padding: 60px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #d32f2f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #d32f2f;
+            color: #fff;
+        }
+
+        .code-block {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: Consolas, monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .navbar {
+            background-color: #b71c1c;
+            padding: 15px;
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        .container_table {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar-container">
+            <h1>Python advanced concepts</h1>
+            <ul class="navbar-links">
+                <li><a href="/">Home</a></li>
+            </ul>
+    </header>
+
+    <section id="variables">
+        <h2>1. Variables</h2>
+        <p>Variables in Python are used to store data values. A variable is created by assigning a value to a name. For
+            example:</p>
+        <div class="code-block">
+            # Creating a variable in Python<br>
+            x = 5<br>
+            name = "John"<br>
+            print(x)<br>
+            print(name)<br>
+        </div>
+        <p>Here, <code>x</code> is a variable storing the integer value 5, and <code>name</code> is a variable storing
+            the string "John".</p>
+    </section>
+</body>
+</html>
