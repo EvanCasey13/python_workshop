@@ -24,4 +24,4 @@ def python_api():
     return render_template('python-api.html')
 
 if __name__ == "__main__":
-    app.run(debug=True)  # To run the app with debugging enabled
+    app.run(host='0.0.0.0', port=5000, debug=True)
