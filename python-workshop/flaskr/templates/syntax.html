@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/Red_Hat_logo.png" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar_style.css') }}">
+    <title>Python Syntax Tutorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/images/redhat-background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: inherit;
+        }
+
+        header {
+            background-color: rgba(255, 25, 0, 0.2);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin: 40px;
+            padding: 40px;
+            border-radius: 5px;
+        }
+
+        nav {
+            background-color: rgba(255, 25, 0, 0.2);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        section {
+            margin: 60px;
+            padding: 60px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #d32f2f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #d32f2f;
+            color: #fff;
+        }
+
+        .code-block {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: Consolas, monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .navbar {
+            background-color: #b71c1c;
+            padding: 15px;
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        .container_table {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar-container">
+            <h1>Python Syntax Tutorial</h1>
+            <ul class="navbar-links">
+                <li><a href="/">Home</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="syntax-introduction">
+        <h2>Introduction to Python Syntax</h2>
+        <p>Python is a versatile, easy-to-learn programming language that emphasizes readability and simplicity. 
+            Let's explore the core elements of Python syntax such as variables, loops, functions, and more.</p>
+    </section>
+
+    <section id="variables">
+        <h2>Variables and Data Types</h2>
+        <p>In Python, you don't need to declare the type of a variable. You simply assign a value to it, and Python figures out the type automatically.</p>
+        <div class="code-block">
+            # Assigning a number to a variable<br>
+            x = 10  # Integer<br>
+            y = 20.5  # Float<br>
+            name = "Alice"  # String<br>
+            is_valid = True  # Boolean
+        </div>
+    </section>
+
+    <section id="control-flow">
+        <h2>If-Else Statements</h2>
+        <p>Python uses if-else statements to make decisions based on conditions.</p>
+        <div class="code-block">
+            # Check if a number is positive, negative, or zero<br>
+            number = -10<br>
+            if number > 0:<br>
+                print("Positive")<br>
+            elif number < 0:<br>
+                print("Negative")<br>
+            else:<br>
+                print("Zero")
+        </div>
+    </section>
+
+    <section id="loops">
+        <h2>Loops</h2>
+        <p>Loops allow you to repeat a block of code multiple times. Python supports both <strong>for</strong> and <strong>while</strong> loops.</p>
+        <div class="code-block">
+            # Using a for loop to iterate over a range<br>
+            for i in range(5):<br>
+                print(i)  # Prints numbers from 0 to 4
+        </div>
+        <br>
+        <div class="code-block">
+            # Using a while loop<br>
+            counter = 0<br>
+            while counter < 5:<br>
+                print(counter)<br>
+                counter += 1  # Increment counter
+        </div>
+    </section>
+
+    <section id="functions">
+        <h2>Functions</h2>
+        <p>Functions are reusable blocks of code. You can define a function using the <code>def</code> keyword.</p>
+        <div class="code-block">
+            # Defining a simple function<br>
+            def greet(name):<br>
+                print(f"Hello, {name}!")<br>
+            greet("John")  # Calling the function
+        </div>
+    </section>
+
+    <section id="classes">
+        <h2>Classes and Objects</h2>
+        <p>Python is an object-oriented language, and you can define your own classes and create objects based on them.</p>
+        <div class="code-block">
+            # Define a simple class<br>
+            class Dog:<br>
+                def __init__(self, name, breed):<br>
+                    self.name = name<br>
+                    self.breed = breed<br>
+                def bark(self):<br>
+                    print(f"{self.name} says Woof!")<br>
+            # Creating an object from the class<br>
+            my_dog = Dog("Buddy", "Golden Retriever")<br>
+            my_dog.bark()  # Calling the bark method
+        </div>
+    </section>
+
+    <section id="modules">
+        <h2>Modules and Packages</h2>
+        <p>Python allows you to import and use external code libraries (modules) to add functionality. For example, the math module allows us to work with mathematical operations.</p>
+        <div class="code-block">
+            # Importing a module<br>
+            import math<br>
+            print(math.sqrt(16))  # Prints the square root of 16
+        </div>
+    </section>
+
+    <section id="file-io">
+        <h2>File Input/Output</h2>
+        <p>Python provides easy methods for reading from and writing to files.</p>
+        <div class="code-block">
+            # Writing to a file<br>
+            with open("example.txt", "w") as file:<br>
+                file.write("Hello, world!")<br>
+            # Reading from a file<br>
+            with open("example.txt", "r") as file:<br>
+                content = file.read()<br>
+                print(content)
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Python Tutorials. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

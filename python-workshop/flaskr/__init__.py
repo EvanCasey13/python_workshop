@@ -27,13 +27,13 @@ def create_app(test_config=None):
     def homepage():
         return render_template('./home.html')
     
+    @app.route('/python-syntax')
+    def python_syntax():
+        return render_template('./syntax.html')
+    
     @app.route('/python-setup')
     def python_setup():
         return render_template('./python-setup.html')
-
-    @app.route('/concepts')
-    def python_concepts():
-        return render_template('./python-concepts.html')
     
     @app.route('/advanced-topics')
     def python_advanced_topics():
