@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/Red_Hat_logo.png" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar_style.css') }}">
+    <title>Python Setup Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #333;
+            color: #ffffff;
+            background-image: url('/static/images/redhat-background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: inherit
+        }
+
+        h1 {
+            color: #F44336;
+        }
+
+        h2 {
+            color: #F44336;
+        }
+
+        pre {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            max-width: 200px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        .step {
+            font-weight: bold;
+        }
+
+        .command {
+            color: #e74c3c;
+        }
+
+        p {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="/" class="navbar-brand">Python Setup</a>
+        <ul class="navbar-links">
+            <li><a href="/">Home</a></li>
+        </ul>
+    </div>
+</nav>
+
+<body>
+
+    <h1>Python Setup Guide</h1>
+
+    <p>Follow these steps to set up Python on your machine:</p>
+
+    <h2>Step 1: Download Python</h2>
+    <p>Visit the official Python website and download the latest version:</p>
+    <ul>
+        <li><a href="https://www.python.org/downloads/" target="_blank">Download Python</a></li>
+    </ul>
+
+    <h2>Step 2: Install Python</h2>
+    <p>After downloading the installer, follow these instructions:</p>
+    <ul>
+        <li>Run the Python installer and make sure to check the box that says <b>“Add Python to PATH”</b>.</li>
+        <li>Click “Install Now” and follow the installation prompts.</li>
+    </ul>
+
+    <h2>Step 3: Verify Installation</h2>
+    <p>Once the installation is complete, open your terminal or command prompt and type the following command:</p>
+    <pre><code class="command">python --version</code></pre>
+    <p>If Python is correctly installed, it will display the version number. For example:</p>
+    <pre><code class="command">Python 3.x.x</code></pre>
+
+    <h2>Step 4: Install pip (if not installed)</h2>
+    <p>If pip (Python package installer) is not installed by default, you can install it manually. Run the following
+        command:</p>
+    <pre><code class="command">python -m ensurepip --upgrade</code></pre>
+
+    <h2>Step 5: Test Python Setup</h2>
+    <p>To verify everything is working, you can write a simple Python script. Open a Visual studio code and create a
+        file called <b>test.py</b>. Inside, write the following:</p>
+    <pre><code class="command">print("Hello, Python!")</code></pre>
+    <p>Then, run the script using this command:</p>
+    <pre><code class="command">python test.py</code></pre>
+    <p>If you see the output <b>Hello, Python!</b>, everything is set up correctly.</p>
+
+</body>
+
+</html>
