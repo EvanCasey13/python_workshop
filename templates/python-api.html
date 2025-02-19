@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../static/images/Red_Hat_logo.png" />
     <link rel="stylesheet" href="{{ url_for('static', filename='navbar_style.css') }}">
-    <title>Python advanced topics</title>
+    <title>Python Advanced Topics</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -104,25 +104,69 @@
 <body>
     <header>
         <div class="navbar-container">
-            <h1>Python advanced concepts</h1>
+            <h1>Python Advanced Concepts</h1>
             <ul class="navbar-links">
                 <li><a href="/">Home</a></li>
             </ul>
     </header>
 
-    <section id="variables">
-        <h2>1. Variables</h2>
-        <p>Variables in Python are used to store data values. A variable is created by assigning a value to a name. For
-            example:</p>
+    <section id="python-api">
+        <h2>2. Creating a Simple Python API with Flask</h2>
+        <p>A Python API allows us to expose data and functionality via HTTP requests. One popular framework for building APIs in Python is Flask. Here's how to create a simple Python API with Flask:</p>
+
         <div class="code-block">
-            # Creating a variable in Python<br>
-            x = 5<br>
-            name = "John"<br>
-            print(x)<br>
-            print(name)<br>
+            # Import Flask<br>
+            from flask import Flask, jsonify<br><br>
+
+            # Initialize Flask app<br>
+            app = Flask(__name__)<br><br>
+
+            # Sample data to be returned by the API<br>
+            data = {<br>
+            "name": "John Doe",<br>
+            "age": 30,<br>
+            "city": "New York"<br>
+            }<br><br>
+
+            # Define a route to expose data<br>
+            @app.route('/api/data', methods=['GET'])<br>
+            def get_data():<br>
+            return jsonify(data)<br><br>
+
+            # Run the app<br>
+            if __name__ == '__main__':<br>
+            app.run(debug=True)<br>
         </div>
-        <p>Here, <code>x</code> is a variable storing the integer value 5, and <code>name</code> is a variable storing
-            the string "John".</p>
+
+        <p>In this example:</p>
+        <ul>
+            <li><code>Flask</code> is imported and used to create a web application.</li>
+            <li><code>jsonify()</code> is used to return the data in JSON format.</li>
+            <li>The <code>/api/data</code> route is defined to handle HTTP GET requests and return the <code>data</code> dictionary.</li>
+            <li><code>app.run(debug=True)</code> starts the Flask development server with debugging enabled.</li>
+        </ul>
+
+        <p>To run this API, you need to install Flask first:</p>
+        <div class="code-block">
+            pip install flask<br>
+        </div>
+
+        <p>Once you have Flask installed, save the Python code in a file (e.g., <code>app.py</code>) and run it using the command:</p>
+        <div class="code-block">
+            python app.py<br>
+        </div>
+
+        <p>Once the server is running, you can test the API by navigating to <code>http://127.0.0.1:5000/api/data</code> in your browser or using a tool like Postman. The response should look like this:</p>
+
+        <div class="code-block">
+            {<br>
+            "name": "John Doe",<br>
+            "age": 30,<br>
+            "city": "New York"<br>
+            }<br>
+        </div>
+
     </section>
 </body>
+
 </html>
